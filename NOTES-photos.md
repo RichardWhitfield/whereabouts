@@ -13,20 +13,21 @@ If nothing in the frame points to the country, the honest cue list is empty.
 | A-10 | 🇵🇹 PT | Buff brick wall, navy blazer, open collar, warm low sun | **No** — and the brick points *away* from Portugal |
 | A-11 | 🇳🇱 NL | Blazer over open collar, blurred European street, flat light | **Weakly** — Northern European register, shared with DE/DK/BE |
 | A-12 | 🇮🇹 IT | Plain wall, white t-shirt, indoor daylight | **No** — zero context of any kind |
-| A-13 | 🇵🇱 PL | **Sydney Harbour Bridge and the Sydney CBD skyline** | **Actively contradicts** — see below |
+| A-13 | 🇵🇱 PL | Sydney Harbour Bridge and the Sydney CBD skyline | Points to where he *lives*, not where he's from |
 
-## A-13 is held as a draft
+## A-13: where you live vs. where you're from
 
-The background is unmistakably Sydney. A player who reads that correctly
-guesses Australia and is scored as maximally wrong, because the answer is
-Poland — about 15,400 km away. That is not the "close counts" near-miss the
-scoring is designed around; it punishes the player for observing accurately.
+The background is Sydney because that is where he lives. Poland is where he is
+from. The photograph is doing exactly what a photograph does.
 
-It also collides with A-06, whose answer *is* Australia.
+This is worth keeping rather than treating as a flaw. The obvious read of the
+frame — "Australian" — is wrong, and finding that out is a sharper lesson in
+the limits of visual inference than any round where the backdrop cooperates.
+It is the game's own premise applied to the backdrop instead of the face.
 
-Photographs taken while travelling or working abroad are going to be common in
-any LinkedIn-sourced pool. Worth deciding how the game handles them before
-this scales.
+It does mean a player can lose points for observing accurately, so it is worth
+watching how it feels in play. Expect a lot of these once the pool grows:
+people photograph themselves where they are, not where they started.
 
 ## The larger finding
 
