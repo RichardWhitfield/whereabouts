@@ -727,108 +727,64 @@ const CONFIG = {
    ============================================================ */
 
 const SUBJECTS = [
+
+  /* --- Demo scaffolding. These have no photographs, so they carry no
+         cues either: there is nothing to have given anything away. Held
+         as drafts until they have a real photo or get deleted. --- */
   {
-    code:'A-01', name:'Subject one', photos:[], country:'NL', consent:true,
-    cues:[
-      'Gilet worn over an open-collar shirt, no tie — the standard Northern European office-casual register.',
-      'Very slim titanium eyewear with no visible hinge, a shape that sells heavily in Dutch and Danish opticians.',
-      'The second photo has a flat horizon, a brick terrace and a cycle path with red asphalt — red bike lanes are a strong Dutch tell.',
-      'Photo taken outdoors in soft overcast light rather than a studio, which is far more common in Dutch professional headshots.'
-    ],
-    note:'Neighbours score well here: the same cues read almost identically in Flanders and northern Germany.'
+    code:'A-01', name:'Subject one', photos:[], country:'NL', consent:true, draft:true,
+    cues:[]
   },
   {
-    code:'A-02', name:'Subject two', photos:[], country:'JP', consent:true,
-    cues:[
-      'Narrow lapel, high two-button stance, minimal shoulder padding — the standard cut of a Japanese business suit.',
-      'A small enamel pin on the left lapel. Company pins are near-universal in Japanese corporate photography.',
-      'Plain pale-grey gradient studio backdrop with the subject centred and square to camera — a photo-studio convention, not a personal choice.',
-      'Hair cut short and set with matte product rather than left loose, consistent with the same formal register.'
-    ],
-    note:'Almost every cue here is about the photograph being taken, not the person in it.'
+    code:'A-02', name:'Subject two', photos:[], country:'JP', consent:true, draft:true,
+    cues:[]
   },
   {
-    code:'A-03', name:'Subject three', photos:[], country:'BR', consent:true,
-    cues:[
-      'Open-collar linen shirt in a warm neutral, no jacket — a warm-climate professional register.',
-      'The background is a stack of pale concrete balconies with vertical louvres, typical mid-century apartment building stock in São Paulo and Rio.',
-      'Strong, high, direct sunlight with short shadows — a low-latitude giveaway.',
-      'Casual arm-around-the-shoulder framing in the group photo, a warmer proxemic norm than you would see in a Northern European equivalent.'
-    ],
-    note:'Latitude cues from light and architecture often narrow things down faster than anything about the person.'
+    code:'A-03', name:'Subject three', photos:[], country:'BR', consent:true, draft:true,
+    cues:[]
   },
   {
-    code:'A-04', name:'Subject four', photos:[], country:'SE', consent:true,
-    cues:[
-      'Muted, low-saturation palette — greys, off-whites and a single deep blue. Very consistent with Scandinavian dress convention.',
-      'Round acetate frames in a pale tortoiseshell, a shape strongly associated with Nordic eyewear design houses.',
-      'Interior photo with pale wood, white walls and a very large window — the standard visual grammar of a Swedish office.',
-      'Low winter sun coming in at a shallow angle, which places the latitude well north.'
-    ],
-    note:''
+    code:'A-04', name:'Subject four', photos:[], country:'SE', consent:true, draft:true,
+    cues:[]
   },
   {
-    code:'A-05', name:'Subject five', photos:[], country:'NG', consent:true,
-    cues:[
-      'A tailored short-sleeve shirt with a mandarin collar and matching trousers — a common West African formal set rather than a Western suit.',
-      'The fabric has a woven pattern rather than a printed one, and the tailoring is clearly made-to-measure, which is the norm rather than the exception.',
-      'The background sign uses a distinctly Nigerian corporate typography and green-white colour convention.',
-      'Group photo shows a mix of Western suits and traditional dress at the same event — a combination that is very characteristic of Lagos business settings.'
-    ],
-    note:'Dress is doing all the work here. West Africa clusters tightly, so Ghana or Benin would still score well.'
+    code:'A-05', name:'Subject five', photos:[], country:'NG', consent:true, draft:true,
+    cues:[]
   },
   {
-    code:'A-06', name:'Subject six', photos:[], country:'AU', consent:true,
-    cues:[
-      'Business shirt with no jacket and sleeves rolled to the forearm — an Australian office standard for most of the year.',
-      'Visible sun damage management: broad-brim hat in the outdoor photo, which is culturally normal rather than eccentric.',
-      'Harsh, very high-contrast sunlight with a blue-shifted sky, characteristic of high UV latitudes in the southern hemisphere.',
-      'Native eucalypt foliage and pale dry grass in the background of the second image.'
-    ],
-    note:'New Zealand is the close miss here, and the scoring is kind about it.'
+    code:'A-06', name:'Subject six', photos:[], country:'AU', consent:true, draft:true,
+    cues:[]
   },
   {
-    code:'A-07', name:'Subject seven', photos:[], country:'IN', consent:true,
-    cues:[
-      'Formal shirt with a Nehru collar in the second photo, paired with Western trousers — a very common Indian professional combination.',
-      'Studio headshot with a strong key light and a saturated blue gradient backdrop, a convention that persists in Indian corporate photography.',
-      'The office background shows an open-plan floor with distinctive ceiling-mounted cassette air conditioning units.',
-      'Wristwear on the right hand rather than the left, which is a mild but real regional pattern.'
-    ],
-    note:''
+    code:'A-07', name:'Subject seven', photos:[], country:'IN', consent:true, draft:true,
+    cues:[]
   },
   {
-    code:'A-08', name:'Subject eight', photos:[], country:'US', consent:true,
-    cues:[
-      'Quarter-zip fleece over a collared shirt — the near-uniform of American professional services outside the coasts.',
-      'Very even, very white dentition in a broad smile held for the camera. Cosmetic dentistry norms differ sharply by country.',
-      'Backdrop is a mid-rise glass office with a distinctly American parking-lot scale in the second photo.',
-      'The headshot is cropped tight to the shoulders with a shallow depth of field, the dominant US LinkedIn convention.'
-    ],
-    note:'Canada is the honourable near-miss, and the distance scoring reflects how blurred that line actually is.'
+    code:'A-08', name:'Subject eight', photos:[], country:'US', consent:true, draft:true,
+    cues:[]
   },
 
-  /* --- First real testers. Drafts until their photo is in and cues are
-         written from what's actually visible in it. See subjects.private.json
-         for which code belongs to whom. --- */
+  /* --- Real testers, one LinkedIn headshot each. cues[] is empty on
+         purpose: see NOTES-photos.md. Nothing goes in here that is not
+         actually visible in the photograph. --- */
   {
-    code:'A-09', name:'Subject nine', photos:[], country:'IR', consent:true, draft:true,
+    code:'A-09', name:'Subject nine', photos:['photos/a-09-1.jpg'], country:'IR', consent:true,
     cues:[]
   },
   {
-    code:'A-10', name:'Subject ten', photos:[], country:'PT', consent:true, draft:true,
+    code:'A-10', name:'Subject ten', photos:['photos/a-10-1.jpg'], country:'PT', consent:true,
     cues:[]
   },
   {
-    code:'A-11', name:'Subject eleven', photos:[], country:'NL', consent:true, draft:true,
+    code:'A-11', name:'Subject eleven', photos:['photos/a-11-1.jpg'], country:'NL', consent:true,
     cues:[]
   },
   {
-    code:'A-12', name:'Subject twelve', photos:[], country:'IT', consent:true, draft:true,
+    code:'A-12', name:'Subject twelve', photos:['photos/a-12-1.jpg'], country:'IT', consent:true,
     cues:[]
   },
   {
-    code:'A-13', name:'Subject thirteen', photos:[], country:'PL', consent:true, draft:true,
+    code:'A-13', name:'Subject thirteen', photos:['photos/a-13-1.jpg'], country:'PL', consent:true, draft:true,
     cues:[]
   }
 ];
