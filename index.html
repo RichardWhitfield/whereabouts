@@ -704,8 +704,18 @@ const CONFIG = {
      country: 'PT',                         // ISO code — must exist in COUNTRIES
      cues:    ['...', '...'],               // the giveaways, revealed after guessing
      note:    'optional closing line',
-     consent: true                          // don't ship a subject without this
+     consent: true,                         // don't ship a subject without this
+     draft:   true                          // omit once real; drafts stay out of the deck
    }
+
+   `draft` is the staging flag. A subject with no photo and no cues is not a
+   round — the player has nothing to read and the reveal has nothing to say —
+   so drafts are filtered out of the deck until they're ready. Delete the flag
+   to bring one live.
+
+   Nothing identifying goes in this file. It ships to GitHub Pages, so names,
+   LinkedIn URLs and email addresses here would be public. Keep the mapping of
+   code -> real person in subjects.private.json, which is gitignored.
 
    Photos: drop them in a /photos folder next to index.html. Square
    LinkedIn headshots crop fine — the frame is 4:5 and centres them.
@@ -796,6 +806,30 @@ const SUBJECTS = [
       'The headshot is cropped tight to the shoulders with a shallow depth of field, the dominant US LinkedIn convention.'
     ],
     note:'Canada is the honourable near-miss, and the distance scoring reflects how blurred that line actually is.'
+  },
+
+  /* --- First real testers. Drafts until their photo is in and cues are
+         written from what's actually visible in it. See subjects.private.json
+         for which code belongs to whom. --- */
+  {
+    code:'A-09', name:'Subject nine', photos:[], country:'IR', consent:true, draft:true,
+    cues:[]
+  },
+  {
+    code:'A-10', name:'Subject ten', photos:[], country:'PT', consent:true, draft:true,
+    cues:[]
+  },
+  {
+    code:'A-11', name:'Subject eleven', photos:[], country:'NL', consent:true, draft:true,
+    cues:[]
+  },
+  {
+    code:'A-12', name:'Subject twelve', photos:[], country:'IT', consent:true, draft:true,
+    cues:[]
+  },
+  {
+    code:'A-13', name:'Subject thirteen', photos:[], country:'PL', consent:true, draft:true,
+    cues:[]
   }
 ];
 
@@ -1118,7 +1152,7 @@ const state = {
 };
 
 function startGame(){
-  const pool = SUBJECTS.filter(function(s){ return s.consent !== false; });
+  const pool = SUBJECTS.filter(function(s){ return s.consent !== false && !s.draft; });
   const ordered = CONFIG.shuffle ? shuffled(pool) : pool.slice();
   state.deck = ordered.slice(0, CONFIG.roundsPerGame);
   state.idx = 0;
